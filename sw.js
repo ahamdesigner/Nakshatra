@@ -2,8 +2,8 @@ var APP_PREFIX = 'ApplicationName_Nakshatra'     // Identifier for this app (thi
 var VERSION = 'version_02'              // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [                            // Add URL you want to cache in this list.
-  '/{Nakshatra}/',                     // If you have separate JS/CSS files,
-  '/{Nakshatra}/index.html'            // add path to those files here
+  '/Nakshatra/',                     // If you have separate JS/CSS files,
+  '/Nakshatra/index.html'            // add path to those files here
 ]
 
 // Respond with cached resources
