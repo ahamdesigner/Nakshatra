@@ -1,117 +1,58 @@
-/*
- * @license
- * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
- */
+var APP_PREFIX = 'ApplicationName_Nakshatra'     // Identifier for this app (this needs to be consistent across every cache update)
+var VERSION = 'version_02'              // Version of the off-line cache (change this value everytime you want to update cache)
+var CACHE_NAME = APP_PREFIX + VERSION
+var URLS = [                            // Add URL you want to cache in this list.
+  '/{Nakshatra}/',                     // If you have separate JS/CSS files,
+  '/{Nakshatra}/index.html'            // add path to those files here
+]
 
-"use strict";
+// Respond with cached resources
+self.addEventListener('fetch', function (e) {
+  console.log('fetch request : ' + e.request.url)
+  e.respondWith(
+    caches.match(e.request).then(function (request) {
+      if (request) { // if cache is available, respond with cache
+        console.log('responding with cache : ' + e.request.url)
+        return request
+      } else {       // if there are no cache, try fetching request
+        console.log('file is not cached, fetching : ' + e.request.url)
+        return fetch(e.request)
+      }
 
-var log = console.log.bind(console);
-var err = console.error.bind(console);
-this.onerror = err;
+      // You can omit if/else for console.log & put one line below like this too.
+      // return request || fetch(e.request)
+    })
+  )
+})
 
-// Moves the contents of one named cached into another.
-var cacheCopy = function (source, destination) {
-    return caches.delete(destination).then(function () {
-        return Promise.all([
-      caches.open(source),
-      caches.open(destination)
-    ]).then(function (results) {
-            var sourceCache = results[0];
-            var destCache = results[1];
+// Cache resources
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log('installing cache : ' + CACHE_NAME)
+      return cache.addAll(URLS)
+    })
+  )
+})
 
-            return sourceCache.keys().then(function (requests) {
-                return Promise.all(requests.map(function (request) {
-                    return sourceCache.match(request).then(function (response) {
-                        return destCache.put(request, response);
-                    });
-                }));
-            });
-        });
-    });
-}
+// Delete outdated caches
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      // `keyList` contains all cache names under your username.github.io
+      // filter out ones that has this app prefix to create white list
+      var cacheWhitelist = keyList.filter(function (key) {
+        return key.indexOf(APP_PREFIX)
+      })
+      // add current cache name to white list
+      cacheWhitelist.push(CACHE_NAME)
 
-var fetchAndCache = function (request, cache) {
-    if (!(request instanceof Request)) {
-        request = new Request(request);
-    }
-
-    return fetch(request.clone()).then(function (response) {
-        cache.put(request, response.clone());
-        return response;
-    });
-};
-
-var baseUrl = (new URL("./", this.location.href) + "");
-// TODO: This is necessary to handle different implementations in the wild
-// The spec defines self.registration, but it was not implemented in Chrome 40.
-var scope;
-if (self.registration) {
-    scope = self.registration.scope;
-} else {
-    scope = self.scope || baseUrl;
-}
-
-this.addEventListener("install", function (e) {
-    // Put updated resources in a new cache, so that currently running pages
-    // get the current versions.
-    e.waitUntil(caches.delete("core-waiting").then(function () {
-        return caches.open("core-waiting").then(function (core) {
-            var resourceUrls = [
-                "",
-                "serviceworker.js",
-                "sw.js",
-                "?offline",
-                "index.html",
-                "favicon.png",
-                "style.css",
-                "home.gif",
-                "internet.gif",
-                "48.png",
-                "72.png",
-                "96.png",
-                "144.png",
-                "168.png",
-                "192.png"
-      ];
-
-            return Promise.all(resourceUrls.map(function (relativeUrl) {
-                return fetchAndCache(baseUrl + relativeUrl, core);
-            }));
-        });
-    }));
-});
-
-
-this.addEventListener("activate", function (e) {
-    // Copy the newly installed cache to the active cache
-    e.waitUntil(cacheCopy("core-waiting", "core"));
-});
-
-this.addEventListener("fetch", function (e) {
-    var request = e.request;
-
-    if (request.url.indexOf(scope) === -1) {
-        return;
-    }
-
-    // Basic read-through caching.
-    e.respondWith(
-        caches.open("core").then(function (core) {
-            return core.match(request).then(function (response) {
-                if (response) {
-                    return response;
-                }
-
-                // we didn't have it in the cache, so add it to the cache and return it
-                log("runtime caching:", request.url);
-
-                return fetchAndCache(request, core);
-            });
-        })
-    );
-});
+      return Promise.all(keyList.map(function (key, i) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          console.log('deleting cache : ' + keyList[i] )
+          return caches.delete(keyList[i])
+        }
+      }))
+    })
+  )
+})
