@@ -63,21 +63,20 @@ this.addEventListener("install", function (e) {
         return caches.open("core-waiting").then(function (core) {
             var resourceUrls = [
                 "",
-                "/serviceworker.js",
-                "/sw.js",
+                "serviceworker.js",
+                "sw.js",
                 "?offline",
                 "index.html",
-                "jquery-3.5.1.min.js",
-                "/favicon.png",
-                "/style.css",
-                "/home.gif",
-                "/preloader/internet.gif",
-                "/touch/48.png",
-                "/touch/72.png",
-                "/touch/96.png",
-                "/touch/144.png",
-                "/touch/168.png",
-                "/touch/192.png"
+                "favicon.png",
+                "style.css",
+                "home.gif",
+                "internet.gif",
+                "48.png",
+                "72.png",
+                "96.png",
+                "144.png",
+                "168.png",
+                "192.png"
       ];
 
             return Promise.all(resourceUrls.map(function (relativeUrl) {
