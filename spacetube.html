@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ml">
+
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Nakshatra Connections</title>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <style type="text/css">
+       /*
+  This file is used for all of your global styles and CSS variables.
+  Check here https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties for more info on using CSS variables.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --app-color-primary: #686bd2;
+    --font-family: sans-serif;
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-Dosis: 'Dosis', sans-serif;
+    --font-Playfair: 'Playfair Display', serif;
+    --font-Pacifico: 'Pacifico', cursive;
+}
+
+html,
+body {
+    font-family: var(--font-Montserrat);
+    background: var(--app-color-primary);
+    padding: 0;
+    margin: 0;
+}
+
+app-index {
+    text-align: center;
+    display: block;
+    font-size: xxx-large;
+    font-family: var(--font-Dosis);
+    color: white;
+    margin-top: 50px;
+}
+
+.videotube {
+    text-align: center;
+    font-family: var(--font-Playfair);
+}
+
+article.yourtube {
+    font-family: var(--font-Pacifico);
+    text-align: center;
+    color: lightgrey;
+    font-size: large;
+}
+
+.ente {
+    display: block;
+    width: 98%;
+    min-height: 50px;
+    background: white;
+    margin: 25px auto;
+    border-radius: 3px;
+    padding-bottom: 15px;
+}
+
+.sahayam {
+    background: transparent;
+    border: 0;
+    color: dimgray;
+    margin-top: 20px;
+    font-size: smaller;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.kuthira {
+    display: block;
+    width: 95%;
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    font-family: var(--font-Pacifico);
+    word-spacing: 4px;
+    text-align: center;
+}
+
+.youtubeInbed {
+    /* override other styles to make responsive */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.clickspace {
+    margin-bottom: 15px;
+}
+
+.bedaname {
+    font-family: var(--font-Dosis);
+    font-family: var(--font-Dosis);
+    font-size: small;
+    color: white;
+    text-align: center;
+}
+
+    </style>
+</head>
+
+<body class="Nakshatra Connection">
+    <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
+    <app-index>Space Book</app-index>
+    <!-- For more info on the pwa-update component click here https://github.com/pwa-builder/pwa-update -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
+    <pwa-update offlineToastDuration="0" swpath="pwabuilder-sw.js"></pwa-update>
+    <p class="videotube">Modern Video Tube</p>
+    <article class="yourtube">Ningade \ save your favourite Videos Images and More coming up</article>
+    <form action="" class="ente choice">
+        <button class="sahayam"></button><br>
+        <input type="name" placeholder="Enter Name Just One Time. Eg: John Doe" class="kuthira">
+        <button class="sahayam"></button><br>
+        <input type="name" placeholder="Enter.Eg: https://youtu.be/B4bxG_a-1FM" class="kuthira bedaname">
+    </form>
+    <article class="yourtube clickspace">Click Your Space</article>
+    <article class="view">
+        <iframe class="youtubeInbed" src="https://www.youtube.com/embed/B4bxG_a-1FM?start=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <article class="view">
+        <iframe class="youtubeInbed" src="https://www.youtube.com/embed/n6bIPWpQ6nY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <article class="view">
+        <iframe class="youtubeInbed" src="https://www.youtube.com/embed/WWkVD64n3zQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+     <article class="view">
+        <iframe class="youtubeInbed" src="https://www.youtube.com/embed/Dp6lbdoprZ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <article class="view">
+        <iframe class="youtubeInbed" src="https://www.youtube.com/embed/3KWv71C1vx4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <article class="view">
+        <iframe class="youtubeInbed" src="https://www.youtube.com/embed/CfTWu4Llbvo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <p class="bedaname">Powered By PW [Progressive Web]</p>
+
+</body>
+
+</html>
