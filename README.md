@@ -1,2 +1,2 @@
 # Nakshatra
-Nakshatra Connections Web Pwa
+Nakshatra Connections Progressive Network
