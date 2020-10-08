@@ -80,3 +80,8 @@ body {
     border-radius: 4px;
     color: #D35400;
 }
+
+.super {
+  font-size: large;
+  text-align: center;
+}
