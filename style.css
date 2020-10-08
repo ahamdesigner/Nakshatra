@@ -81,7 +81,15 @@ body {
     color: #D35400;
 }
 
-.super {
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.PW {
   font-size: large;
   text-align: center;
+  display: block;
+  margin-left: auto;
+  border: 1px solid red;
 }
