@@ -1,9 +1,30 @@
-/* This file is used for all of your global styles and CSS variables. Check here https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties for more info on using CSS variables. */ @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); :root { --app-color-primary: #686bd2; --font-family: sans-serif; --font-Montserrat: 'Montserrat', sans-serif; --font-Dosis: 'Dosis', sans-serif; --font-Playfair: 'Playfair Display', serif; --font-Pacifico: 'Pacifico', cursive; } html, body { font-family: var(--font-Montserrat); background: white; padding: 0; margin: 0; } app-index { text-align: center;
+/* This file is used for all of your global styles and CSS variables. Check here https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties for more info on using CSS variables. */ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); 
+:root { --app-color-primary: #686bd2; --font-family: sans-serif; --font-Montserrat: 'Montserrat', sans-serif; --font-Dosis: 'Dosis', sans-serif; --font-Playfair: 'Playfair Display', serif; --font-Pacifico: 'Pacifico', cursive; } 
+html, body { font-family: var(--font-Montserrat); background: white; padding: 0; margin: 0; } 
+
+app-index { text-align: center;
     display: block;
     font-size: xxx-large;
     font-family: var(--font-Dosis);
     color: #686bd2;
-    margin-top: 50px; } .videotube { text-align: center; font-family: var(--font-Playfair); } article.yourtube { font-family: var(--font-Pacifico); text-align: center; color: #9395f0; font-size: large; } .ente { display: block; width: 98%; min-height: 50px; background: white; margin: 25px auto; border-radius: 3px; padding-bottom: 15px; } .sahayam { background: transparent; border: 0; color: dimgray; margin-top: 20px; font-size: smaller; text-align: center; display: block; width: 100%; margin-top: 15px; } .kuthira { display: block; width: 95%; margin-left: 5px; padding-top: 5px; padding-bottom: 5px; border: 1px solid lightgrey; border-radius: 3px; font-family: var(--font-Pacifico); word-spacing: 4px; text-align: center; } .youtubeInbed { /* override other styles to make responsive */ margin-left: auto; margin-right: auto; display: block; margin-bottom: 10px; } .clickspace { margin-bottom: 15px; } .bedaname { font-family: var(--font-Dosis);
+    margin-top: 50px; } .videotube { text-align: center;
+    font-family: var(--font-Playfair);
+    font-size: small;
+    font-weight: bold;
+} 
+
+article.yourtube { font-family: var(--font-Pacifico); text-align: center; color: #9395f0; font-size: large; } 
+.ente { display: block; width: 98%; min-height: 50px; background: white; margin: 25px auto; border-radius: 3px; padding-bottom: 15px; } 
+.sahayam { background: transparent; border: 0; color: dimgray; margin-top: 20px; font-size: smaller; text-align: center; display: block; width: 100%; margin-top: 15px; } 
+.kuthira { display: block; width: 95%; margin-left: 5px; padding-top: 5px; padding-bottom: 5px; border: 1px solid lightgrey; border-radius: 3px; font-family: var(--font-Pacifico); word-spacing: 4px; text-align: center; } 
+.youtubeInbed { /* override other styles to make responsive */ margin-left: auto; margin-right: auto; display: block; margin-bottom: 10px; } 
+.clickspace { margin-bottom: 15px; } 
+
+.bedaname { font-family: var(--font-Dosis);
     font-family: var(--font-Dosis);
     font-size: small;
     color: white;
