@@ -3,7 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); 
-:root { --app-color-primary: #686bd2; --font-family: sans-serif; --font-Montserrat: 'Montserrat', sans-serif; --font-Dosis: 'Dosis', sans-serif; --font-Playfair: 'Playfair Display', serif; --font-Pacifico: 'Pacifico', cursive; } 
+:root { 
+    --app-color-primary: #686bd2; 
+    --font-family: sans-serif; 
+    --font-Montserrat: 'Montserrat', sans-serif; 
+    --font-Dosis: 'Dosis', sans-serif; 
+    --font-Playfair: 'Playfair Display', serif; 
+    --font-Pacifico: 'Pacifico', cursive; 
+}
+
 html, body { 
     font-family: var(--font-Montserrat); 
     background: white; 
@@ -16,7 +24,9 @@ app-index { text-align: center;
     font-size: xxx-large;
     font-family: var(--font-Dosis);
     color: #686bd2;
-    margin-top: 50px; } 
+    margin-top: 50px; 
+} 
+
 .videotube { 
     text-align: center;
     font-family: var(--font-Playfair);
