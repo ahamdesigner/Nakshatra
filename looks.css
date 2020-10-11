@@ -11,14 +11,31 @@ app-index { text-align: center;
     font-size: xxx-large;
     font-family: var(--font-Dosis);
     color: #686bd2;
-    margin-top: 50px; } .videotube { text-align: center;
+    margin-top: 50px; } 
+.videotube { 
+    text-align: center;
     font-family: var(--font-Playfair);
     font-size: small;
     font-weight: bold;
 } 
 
-article.yourtube { font-family: var(--font-Pacifico); text-align: center; color: #9395f0; font-size: large; } 
-.ente { display: block; width: 98%; min-height: 50px; background: white; margin: 25px auto; border-radius: 3px; padding-bottom: 15px; } 
+article.yourtube { 
+    font-family: var(--font-Pacifico); 
+    text-align: center; 
+    color: #9395f0; 
+    font-size: large; 
+} 
+
+.ente { 
+    display: block; 
+    width: 98%; 
+    min-height: 50px; 
+    background: white; 
+    margin: 25px auto; 
+    border-radius: 3px; 
+    padding-bottom: 15px; 
+} 
+
 .sahayam { background: transparent; border: 0; color: dimgray; margin-top: 20px; font-size: smaller; text-align: center; display: block; width: 100%; margin-top: 15px; } 
 .kuthira { display: block; width: 95%; margin-left: 5px; padding-top: 5px; padding-bottom: 5px; border: 1px solid lightgrey; border-radius: 3px; font-family: var(--font-Pacifico); word-spacing: 4px; text-align: center; } 
 .youtubeInbed { /* override other styles to make responsive */ margin-left: auto; margin-right: auto; display: block; margin-bottom: 10px; } 
