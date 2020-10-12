@@ -3,6 +3,7 @@
   "short_name": "spacetube",
   "description": "Editors chioice music album.",
   "display": "standalone",
+  "start_url":"spacetube.html",
   "scope": "/app/",
   "icons": [{
     "src": "icon-256x256.png",
