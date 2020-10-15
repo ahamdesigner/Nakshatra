@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript">
-      $.getJSON('database/premium.json', function(data) {
-        //do stuff with your data here
-        console.log(data)
+      let url = "database/premium.json";
+      let response = fetch(url);
+      fetch(url)
+      .then(response => {
+          // handle the response
+      })
+      .catch(error => {
+          // handle the error
       });
+      console.log(response);
     </script>
     <title>Manage Switch</title>
   </head>
