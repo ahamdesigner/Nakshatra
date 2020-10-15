@@ -4,14 +4,9 @@
     <meta charset="utf-8">
     <script type="text/javascript">
       let url = "database/premium.json";
-      let response = fetch(url);
       fetch(url)
       .then(response => response.json())
-      .then(data => console.log(response))
-      .catch(error => {
-          // handle the error
-      });
-      console.log(response);
+      .then(data => console.log(data));
     </script>
     <title>Manage Switch</title>
   </head>
