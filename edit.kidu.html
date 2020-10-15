@@ -6,10 +6,11 @@
      fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
      .then(res => res.json())
      .then((premium) => {
-       let embed = "https://www.youtube.com/embed/"
+       let embed = "https://www.youtube.com/embed/" + premium[ind].embed
        let ind = 0
         console.log('Output: ', premium[ind].name);
         console.log('Output: ', premium[ind].embed);
+        console.log('embed: ', embed);
     }).catch(err => console.error(err));
     </script>
     <title>Manage Switch</title>
