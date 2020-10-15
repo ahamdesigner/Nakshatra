@@ -6,10 +6,8 @@
       let url = "database/premium.json";
       let response = fetch(url);
       fetch(url)
-      .then(response => {
-          // handle the response
-        console.log("response",response)
-      })
+      .then(response => response.text())
+      .then(data => console.log(data))
       .catch(error => {
           // handle the error
       });
