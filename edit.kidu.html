@@ -6,8 +6,8 @@
      fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
      .then(res => res.json())
      .then((premium) => {
-       let embed = "https://www.youtube.com/embed/" + premium[ind].embed
        let ind = 0
+       let embed = "https://www.youtube.com/embed/" + premium[ind].embed
         console.log('Output: ', premium[ind].name);
         console.log('Output: ', premium[ind].embed);
         console.log('embed: ', embed);
