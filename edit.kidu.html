@@ -6,7 +6,7 @@
       let url = "database/premium.json";
       let response = fetch(url);
       fetch(url)
-      .then(response => response.text())
+      .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => {
           // handle the error
