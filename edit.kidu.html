@@ -3,10 +3,21 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript">
-      let url = "database/premium.json";
-      fetch(url)
+      const data = { username: 'example' };
+      fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json', {
+        method: 'POST', // or 'PUT'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data => {
+        console.log('Success:', data);
+      })
+//       .catch((error) => {
+//         console.error('Error:', error);
+//       });
     </script>
     <title>Manage Switch</title>
   </head>
