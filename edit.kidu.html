@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript">
+      function switch() {
+        alert();
+                      }
      fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
      .then(res => res.json())
      .then((premium) => {
@@ -17,11 +20,10 @@
   <body>
     <article class="view">
       <article class="yourtube clickspace">
-      Eagle Cali
-      <iframe class="youted" landscape src="" 
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="youted" landscape src="https://www.youtube.com/embed/NYm4fquNhqI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </article>
-    </article>  
-
+    </article> 
+    <button onclick="switch()" class="switch">Switch</button>
+    
   </body>
 </html>
