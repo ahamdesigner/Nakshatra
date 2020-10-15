@@ -3,21 +3,11 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript">
-      const data = { username: 'example' };
-      fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json', {
-        method: 'POST', // or 'PUT'
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-      })
-//       .catch((error) => {
-//         console.error('Error:', error);
-//       });
+     fetch('http://time.jsontest.com')
+    .then(res => res.json())
+    .then((out) => {
+        console.log('Output: ', out);
+}).catch(err => console.error(err));
     </script>
     <title>Manage Switch</title>
   </head>
