@@ -15,16 +15,15 @@
     
     <script type="text/javascript">
       function switch() {
-        alert()
+        fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
+         .then(res => res.json())
+         .then((premium) => {
+           let ind = 0
+           let embed = "https://www.youtube.com/embed/" + premium[ind].embed
+            console.log('Output: ', embed);
+           document.getElementsByClassName("youted")[ind].setAttribute("src", embed);
+        }).catch(err => console.error(err));
       }
-     fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
-     .then(res => res.json())
-     .then((premium) => {
-       let ind = 0
-       let embed = "https://www.youtube.com/embed/" + premium[ind].embed
-        console.log('Output: ', embed);
-       document.getElementsByClassName("youted")[ind].setAttribute("src", embed);
-    }).catch(err => console.error(err));
     </script>
     
   </body>
