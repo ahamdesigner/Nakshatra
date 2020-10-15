@@ -1,4 +1,4 @@
-let article = [
-  {["Aalolam Lyric","CfTWu4Llbvo"]},
-  {["Aalolam","CfTWu4Llbvo"]}
+[
+  {["Aalolam Lyric":"CfTWu4Llbvo"]},
+  {["Aalolam":"CfTWu4Llbvo"]}
 ]
