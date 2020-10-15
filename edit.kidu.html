@@ -5,14 +5,24 @@
     <script type="text/javascript">
      fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
      .then(res => res.json())
-     .then((out) => {
-        console.log('Output: ', out);
+     .then((premium) => {
+       let embed = "https://www.youtube.com/embed/"
+       let ind = 0
+        console.log('Output: ', premium[ind].name);
+        console.log('Output: ', premium[ind].embed);
     }).catch(err => console.error(err));
     </script>
     <title>Manage Switch</title>
   </head>
   <body>
-    The forms coming up
+    <article class="view">
+      <article class="yourtube clickspace">
+      Eagle Cali
+      <iframe class="youted" landscape src="https://www.youtube.com/embed/
+      EqPtz5qN7HM" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+    </article>  
 
   </body>
 </html>
