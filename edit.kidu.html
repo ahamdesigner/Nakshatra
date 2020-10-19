@@ -19,9 +19,10 @@
          .then(res => res.json())
          .then((premium) => {
            let ind = 0
+           ind++;
            let embed = "https://www.youtube.com/embed/" + premium[ind].embed
             console.log('Output: ', embed);
-           document.getElementsByClassName("youted")[ind].setAttribute("src", embed);
+           document.getElementsByClassName("youted")[0].setAttribute("src", embed);
         }).catch(err => console.error(err));
       }
     </script>
