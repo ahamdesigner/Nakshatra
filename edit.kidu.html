@@ -7,25 +7,10 @@
   </head>
   <body>
     <article class="view">
-      <article class="yourted clickspace">
-        test
-      </article>
+      <article class="yourted clickspace">lup</article>
     </article> 
-    <button onclick="switchon()" class="switchon">Switch On</button>
-    
-    <script type="text/javascript">
-       function switchon() {
-        fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
-         .then(res => res.json())
-         .then((premium) => {
-           let ind = 0
-           ind++;
-           let embed = ind + premium[ind].embed
-           console.log('Output: ',ind , embed);
-           document.getElementsByClassName("youted")[0].innerHTML = embed;
-        }).catch(err => console.error(err));
-      }
-    </script>
-    
+    <button class="switchon">Switch On</button>
+    <script type="text/javascript"></script>
+  
   </body>
 </html>
