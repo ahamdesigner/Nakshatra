@@ -7,7 +7,7 @@
   </head>
   <body>
     <article class="view">
-      <article class="yourtube clickspace">
+      <article class="yourted clickspace">
         test
       </article>
     </article> 
@@ -15,16 +15,15 @@
     
     <script type="text/javascript">
        function switchon() {
-                      alert()
-//         fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
-//          .then(res => res.json())
-//          .then((premium) => {
-//            let ind = 0
-//            ind++;
-//            let embed = "https://www.youtube.com/embed/" + premium[ind].embed
-//             console.log('Output: ',ind , embed);
-//            document.getElementsByClassName("youted")[0].setAttribute("src", embed);
-//         }).catch(err => console.error(err));
+        fetch('https://ahamdesigner.github.io/Nakshatra/database/premium.json')
+         .then(res => res.json())
+         .then((premium) => {
+           let ind = 0
+           ind++;
+           let embed = ind + premium[ind].embed
+           console.log('Output: ',ind , embed);
+           document.getElementsByClassName("youted")[0].innerHTML = embed;
+        }).catch(err => console.error(err));
       }
     </script>
     
