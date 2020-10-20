@@ -1,9 +1,9 @@
 {
-    "name": "spacetube",
-    "short_name": "spacetube",
-    "description": "Editors chioice music album.",
+    "name": "Ads Free",
+    "short_name": "Freemium",
+    "description": "Freemium chioice.",
     "display": "standalone",
-    "start_url": "https://ahamdesigner.github.io/Nakshatra/spacetube.html",
+    "start_url": "/Ga.html",
     "scope": "/app/",
     "icons": [
         {
@@ -18,7 +18,6 @@
         }
     ],
     "background_color": "",
-    "url": "https://ahamdesigner.github.io/Nakshatra/spacetube.html",
+    "url": "https://ahamdesigner.github.io/Nakshatra/Ga.html",
     "lang": "English",
-    "screenshots": []
 }
