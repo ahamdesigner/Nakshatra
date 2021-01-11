@@ -14,10 +14,10 @@
   "IsOptedInToEmails": true,
   "CourseProgress": [
     {
-      "CourseName": "Google Analytics for Beginners",
-      "StartDate": 20201011,
+      "CourseName": "Google Analytics",
+      "StartDate": 20211011,
       "CourseCompleted": true,
-      "CertificateDate": 20201012,
+      "CertificateDate": 20211012,
       "AssessmentsProgress": [
         {
           "Title": "Assessment 1",
