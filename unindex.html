@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="संस्कृत">
+<html lang="sa">
 
 <head>
     <meta name="mobile-web-app-capable" content="yes">
@@ -28,7 +28,7 @@
         <option value="mrs">Mrs</option>
     </select>
     <form>
-        <input class="ohm name" placeholder="नामन्" type="password" autocomplete="off">
+        <input class="ohm name" placeholder="Name" type="name" autocomplete="off">
     </form>
     <select class="ohm stars">
         <option>നാൾ</option>
@@ -72,12 +72,12 @@
         <option>शनि</option>
     </select>
     <form>
-        <input class="ohm Custom node" placeholder="***" type="text" autocomplete="off">
+        <input class="ohm Custom node" placeholder="Connector" type="text" autocomplete="off">
         <input class="ohm index wage invisible" type="number" placeholder="अनुक्रमणिका:1" name="अनुक्रमणिका">
     </form>
 
-    <button class="ohm pariNAma invisible">लोका समस्था सुखिनो भवंतु</button>
-    <button type="button" class="print ohm" onclick="parinama()" name="button">मुद्रालिपि</button>
+    <button class="ohm parinama invisible">लोका समस्था सुखिनो भवंतु</button>
+    <button type="button" class="print ohm" onclick="parinama()" name="button">Connect</button>
 </body>
 <style type="text/css">
     @font-face {
@@ -204,6 +204,6 @@
 <script type="text/javascript">
   function parinama() {
     window.prompt("Yoga");
-    window.print()
+    console.log()
   }
 </script>
